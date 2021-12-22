@@ -19,7 +19,7 @@ class RegisterType extends AbstractType
     {
         $builder
             ->add('speudo', TextType::class, [
-                'label' => 'Votre speudo!',
+                'label' => 'Votre speudo',
                 'constraints' => [
                     new Assert\Length([
                         'min' => 3,
@@ -29,15 +29,29 @@ class RegisterType extends AbstractType
                     ]),
                 ],
                 'attr' => [
-                    'placeholder' => 'Merci de saisir votre speudo',
-                    'class' => 'formRegisterSpeudo'
+                    'placeholder' => ' Merci de saisir votre speudo',
+                    'class' => 'inputRegister'
+                ]
+            ])
+            ->add('Nom', TextType::class, [
+                'label' => 'Votre Nom',
+                'attr' => [
+                    'placeholder' => ' Merci de saisir votre Nom',
+                    'class' => 'inputRegister'
+                ]
+            ])
+            ->add('Prenom', TextType::class, [
+                'label' => 'Votre Prénom',
+                'attr' => [
+                    'placeholder' => ' Merci de saisir votre Prénom',
+                    'class' => 'inputRegister'
                 ]
             ])
             ->add('email', EmailType::class, [
                 'label' => 'Votre Email',
                 'attr' => [
-                    'placeholder' => 'Emerci de saisir votre adresse email',
-                    'class' => 'formRegisterEmail'
+                    'placeholder' => 'Merci de saisir votre adresse email',
+                    'class' => 'inputRegister'
                 ]
             ])
             ->add('password', RepeatedType::class, [
@@ -57,7 +71,7 @@ class RegisterType extends AbstractType
                     ],
                     'attr' => [
                         'placeholder' => 'Merci de saisir votre mot de passe',
-                        'class' => 'formRegisterPassword'
+                        'class' => 'inputRegister'
                     ]
                 ],
                 'second_options' => [
@@ -72,7 +86,7 @@ class RegisterType extends AbstractType
                     ],
                     'attr' => [
                         'placeholder' => 'Merci de confirmer votre mot de passe',
-                        'class' => 'formRegisterPassword'
+                        'class' => 'inputRegister'
                     ]
                 ]
             ])
@@ -80,7 +94,7 @@ class RegisterType extends AbstractType
             ->add('submit', SubmitType::class, [
                 'label' => 'S\'inscrire',
                 'attr' => [
-                    'class' => 'formRegisterSubmit'
+                    'class' => 'submitRegister'
                 ]
             ])
         ;

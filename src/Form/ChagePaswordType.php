@@ -23,12 +23,16 @@ class ChagePaswordType extends AbstractType
         ->add('speudo', TextType::class, [
             'disabled' => true,
             'label' => 'Ton speudo',
+            'attr' => [
+                'class' => 'InputChangePasword'
+            ]
         ])
         ->add('old_password', PasswordType::class, [
                 'label' => 'Ton mot de passe actuel',
                 'mapped' => false,
                 'attr' => [
                     'placeholder' => 'Merci de saisir votre mot de passe actuel', 
+                    'class' => 'InputChangePasword'
                 ]
         ])
         ->add('new_password', RepeatedType::class, [
@@ -49,7 +53,7 @@ class ChagePaswordType extends AbstractType
                 ],
                 'attr' => [
                     'placeholder' => 'Merci de saisir votre mot de passe',
-                    'class' => 'formRegisterPassword'
+                    'class' => 'InputChangePasword'
                 ]
             ],
             'second_options' => [
@@ -64,14 +68,14 @@ class ChagePaswordType extends AbstractType
                 ],
                 'attr' => [
                     'placeholder' => 'Merci de confirmer votre nouveau mot de passe',
-                    'class' => 'formRegisterPassword'
+                    'class' => 'InputChangePasword'
                 ]
             ]
         ])
         ->add('submit', SubmitType::class, [
             'label' => 'Modifier le mot de passe',
             'attr' => [
-                'class' => 'formRegisterSubmit'
+                'class' => 'submitChangePasword'
             ]
         ])
         
