@@ -288,6 +288,7 @@ a {
 .heaiderSpeudo {
     background-color: #87cefa;
     display: flex;
+    transition: opacity ease-in 1s;
 }
 
 .heaiderSpeudo h1 {
@@ -339,7 +340,7 @@ a {
 }
 
 .burger.active .line:nth-child(3) {
-    top: 10px;
+    top: 9px;
     transform: rotate(-135deg);
 }
 
@@ -348,9 +349,9 @@ a {
     position: absolute;
     transition: opacity ease-in 1s;
     width: 250px;
-    height: 200px;
+    height: 350px;
     background-color: #fff;
-    top: 210px;
+    top: 230px;
     left: 50px;
     display: flex;
     flex-direction: column;
@@ -361,11 +362,11 @@ a {
 
 .loginActive {
     opacity: 1;
-    width: 250px;
-    height: 200px;
-    background-color: #fff;
     position: absolute;
-    top: 210px;
+    width: 250px;
+    height: 350px;
+    background-color: #fff;
+    top: 230px;
     left: 50px;
     display: flex;
     flex-direction: column;
@@ -401,9 +402,9 @@ a {
 }
 
 .speudoImg {
-    width: 50%;
-    height: 20%;
-    margin: 20px 0 10px 65px;
+    width: 150px;
+    height: 150px;
+    margin: 10px 0 10px 50px;
     border: none;
     border-radius: 50%;
 }
