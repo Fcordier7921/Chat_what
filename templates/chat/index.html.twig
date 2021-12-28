@@ -7,12 +7,24 @@
     <div class="generalChat">
     
         <div class="containerPesudo">
-            <h1>Salut {{ app.user.speudo }}</h1>
-            <img class="speudoImg" src="https://www.beachamigos.fr/media/uploaded/sites/9202/actualite/5c84f689e908e_Pseudoetanonymat.png" alt="image du speudo">
-            <div class="login">
-                <a href="{{ path('app_logout')}}">Ce déconecté</a>
-                <a href="{{ path('acout_password')}}">Modifier sont mot de passe</a>
+            <div class="heaiderSpeudo">
+                <h1>Salut {{ app.user.speudo }}</h1>
+                <div class="burgerSpeudo">
+                    <div class="burger">
+                        <div class="line line1"></div>
+                        <div class="line line2"></div>
+                        <div class="line line3"></div>
+                    </div>
+                    <div class="login ">
+                        <a href="{{ path('app_logout')}}">Se déconecté</a>
+                        <a href="{{ path('acout_password')}}">Modifier le mot de passe</a>
+                    </div>
+                </div>
+                
             </div>
+            
+            <img class="speudoImg" src="https://www.beachamigos.fr/media/uploaded/sites/9202/actualite/5c84f689e908e_Pseudoetanonymat.png" alt="image du speudo">
+            
             <div class="info">
                 <p class="email">{{ app.user.email }}</p>
                 <p class="nom">{{ app.user.nom }}</p>

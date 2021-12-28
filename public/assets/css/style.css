@@ -285,15 +285,119 @@ a {
     margin: 0 50px;
 }
 
-.containerPesudo h1 {
+.heaiderSpeudo {
+    background-color: #87cefa;
+    display: flex;
+}
+
+.heaiderSpeudo h1 {
     width: 100%;
     height: 60px;
-    text-align: center;
     padding-top: 8px;
-    background-color: #87cefa;
+    padding-left: 8px;
     font-size: 30px;
     font-weight: bold;
     color: #333;
+}
+
+.burger {
+    width: 30px;
+    height: 30px;
+    margin: 15px 10px 0 0;
+    cursor: pointer;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    border-radius: 50px;
+    background-color: #333;
+    position: relative;
+    transition: all 1s ease-in-out;
+}
+
+.line1 {
+    top: 5px;
+}
+
+.line2 {
+    top: 11px;
+}
+
+.line3 {
+    top: 18px;
+}
+
+.burger.active .line:nth-child(1) {
+    top: 13px;
+    transform: rotate(135deg);
+}
+
+.burger.active .line:nth-child(2) {
+    transform: translateX(-20px);
+    opacity: 0;
+}
+
+.burger.active .line:nth-child(3) {
+    top: 10px;
+    transform: rotate(-135deg);
+}
+
+.login {
+    opacity: 0;
+    position: absolute;
+    transition: opacity ease-in 1s;
+    width: 250px;
+    height: 200px;
+    background-color: #fff;
+    top: 210px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 2%;
+}
+
+.loginActive {
+    opacity: 1;
+    width: 250px;
+    height: 200px;
+    background-color: #fff;
+    position: absolute;
+    top: 210px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 2%;
+}
+
+.login a {
+    width: 80%;
+    height: 30px;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 7px 20px;
+    text-align: center;
+    background-color: #fcc817;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 20px;
+}
+
+.loginActive a {
+    width: 80%;
+    height: 30px;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 7px 20px;
+    text-align: center;
+    background-color: #fcc817;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 20px;
 }
 
 .speudoImg {
