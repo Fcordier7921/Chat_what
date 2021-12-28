@@ -229,7 +229,8 @@ a {
     background-color: #fcc817;
     border: none;
     border-radius: 5px;
-    margin: 10px 5px;
+    margin: 25px 5px;
+    cursor: pointer;
 }
 
 .submitChangePaswordRetrour {
@@ -244,6 +245,61 @@ a {
     border-radius: 5px;
     position: relative;
     left: 40%;
-    bottom: 27px;
+    bottom: 12px;
     cursor: pointer;
+}
+
+
+/*-------------- page chat----------------------*/
+
+.contenaireChat {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #fff;
+    background-image: url(../img/sky.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.generalChat {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    background-color: transparent;
+    display: flex;
+}
+
+.containerPesudo {
+    width: 1500px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0 50px;
+}
+
+.containerPesudo h1 {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    padding-top: 8px;
+    background-color: #87cefa;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+}
+
+.speudoImg {
+    width: 50%;
+    height: 20%;
+    margin: 20px 0 10px 65px;
+    border: none;
+    border-radius: 50%;
 }

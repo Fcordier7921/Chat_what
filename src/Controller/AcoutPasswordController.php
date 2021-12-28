@@ -21,7 +21,7 @@ class AcoutPasswordController extends AbstractController
 
     
     /**
-     * @Route("/chat/madif-mon-mot-de-passe", name="acout_password")
+     * @Route("/chat/modif-mon-mot-de-passe", name="acout_password")
      */
     public function index(Request $request, UserPasswordEncoderInterface $encoder): Response
     {

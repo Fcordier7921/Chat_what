@@ -1,9 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ChatController!{% endblock %}
+{% block title %}chat {% endblock %}
 
 {% block body %}
-<a href="{{ path('app_logout')}}">Ce déconecté</a>
-<a href="{{ path('acout_password')}}">Modifier sont mot de passe</a>
+ <div class="contenaireChat">
+    <div class="generalChat">
+    
+        <div class="containerPesudo">
+            <h1>Salut {{ app.user.speudo }}</h1>
+            <img class="speudoImg" src="https://www.beachamigos.fr/media/uploaded/sites/9202/actualite/5c84f689e908e_Pseudoetanonymat.png" alt="image du speudo">
+            <div class="login">
+                <a href="{{ path('app_logout')}}">Ce déconecté</a>
+                <a href="{{ path('acout_password')}}">Modifier sont mot de passe</a>
+            </div>
+            <div class="info">
+                <p class="email">{{ app.user.email }}</p>
+                <p class="nom">{{ app.user.nom }}</p>
+                <p class="prenom">{{ app.user.prenom }}</p>
+            </div>
+
+        </div>
+        <div class="containercorpChat">
+            <div class="containerGroupe">
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            </div>
+            <div class="containerPerticipent">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae facilis ab atque sunt reprehenderit illum assumenda consequatur repellendus sed asperiores a eligendi placeat dolorum maxime est natus rerum nesciunt, molestias corrupti iusto distinctio quae esse quaerat inventore? Maiores et commodi culpa quasi exercitationem aliquam eius amet illo quo officiis enim obcaecati, cum hic dolore odit recusandae repudiandae quaerat odio suscipit totam blanditiis asperiores reprehenderit? Id esse quaerat itaque rerum obcaecati, veritatis accusantium nemo modi commodi minima blanditiis neque dolorum sunt labore ipsam laboriosam soluta perspiciatis impedit dolores minus voluptates non totam. Accusantium ut fugiat provident, debitis fugit reprehenderit culpa dicta!</p>
+            </div>
+            <div class="containerMessage">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae facilis ab atque sunt reprehenderit illum assumenda consequatur repellendus sed asperiores a eligendi placeat dolorum maxime est natus rerum nesciunt, molestias corrupti iusto distinctio quae esse quaerat inventore? Maiores et commodi culpa quasi exercitationem aliquam eius amet illo quo officiis enim obcaecati, cum hic dolore odit recusandae repudiandae quaerat odio suscipit totam blanditiis asperiores reprehenderit? Id esse quaerat itaque rerum obcaecati, veritatis accusantium nemo modi commodi minima blanditiis neque dolorum sunt labore ipsam laboriosam soluta perspiciatis impedit dolores minus voluptates non totam. Accusantium ut fugiat provident, debitis fugit reprehenderit culpa dicta!</p>
+            </div>
+        
+        </div>
+    </div>
+ </div>
+
 
 {% endblock %}
