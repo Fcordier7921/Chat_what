@@ -17,10 +17,11 @@
             {{ form_row(form.telephone) }}
             {{ form_row(form.password) }}
             <div class="retourRegister">
-            {{ form_row(form.submit) }}
+                {{ form_row(form.submit) }}
            
-            
-            <button class="retour" href="{{ path('app_login')}}" >Retour</button>
+                <div class="retour">
+                    <a  href="{{ path('app_login')}}" >Retour</a>
+                </div>
             </div>
 
         {{ form_end(form) }}  
