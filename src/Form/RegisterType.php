@@ -8,6 +8,7 @@ use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -53,6 +54,28 @@ class RegisterType extends AbstractType
                     'placeholder' => 'Merci de saisir votre adresse email',
                     'class' => 'inputRegister'
                 ]
+            ])
+            ->add('adress', TextType::class, [
+                'label' => 'Votre Adresse postal',
+                'label_attr' => [
+                    'class' => 'required'
+                ],
+                'attr' => [
+                    'placeholder' => ' Merci de saisir votre Adresse postal',
+                    'class' => 'inputRegister'
+                ],
+                'required' => false
+            ])
+            ->add('telephone', NumberType::class, [
+                'label' => 'Votre numéro de téléphone',
+                'label_attr' => [
+                    'class' => 'required'
+                ],
+                'attr' => [
+                    'placeholder' => ' Merci de saisir votre numéro de téléphone',
+                    'class' => 'inputRegister'
+                ],
+                'required' => false
             ])
             ->add('password', RepeatedType::class, [
                 'type' => PasswordType::class,

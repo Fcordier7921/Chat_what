@@ -14,7 +14,7 @@
 
             {% if app.user %}
                 <div class="infoLogin">
-                    Vous êtes connecté en tant que {{ app.user.username }}, <a href="{{ path('app_logout') }}">déconnexion</a>
+                    Vous êtes connecté en tant que {{ app.user.username }} <a href="{{ path('app_logout') }}">déconnexion</a>
                 </div>
             {% endif %}
 
@@ -32,7 +32,7 @@
                 <button class="conectionLogin" type="submit">
                     se connecté
                 </button>
-                <p class="deconectionLogin">Si vous n'avez pas de conmpte utilisateur, merci de vous inscrire <a  href="{{ path('register')}}">Ici</a></p>
+                <p class="registerLogin">Si vous n'avez pas de conmpte utilisateur, merci de vous inscrire <a  href="{{ path('register')}}">Ici</a></p>
                 
                 </p>
             </div>

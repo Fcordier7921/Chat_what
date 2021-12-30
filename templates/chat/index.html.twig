@@ -15,20 +15,21 @@
                         <div class="line line2"></div>
                         <div class="line line3"></div>
                     </div>
-                    <div class="login ">
-                        <a href="{{ path('app_logout')}}">Se déconecté</a>
-                        <a href="{{ path('acout_password')}}">Modifier le mot de passe</a>
-                    </div>
+                    
                 </div>
                 
             </div>
             
             <img class="speudoImg" src="https://www.beachamigos.fr/media/uploaded/sites/9202/actualite/5c84f689e908e_Pseudoetanonymat.png" alt="image du speudo">
-            
+            <div class="login ">
+                        <a href="{{ path('register')}}">Modifier Vos informations</a>
+                        <a href="{{ path('acout_password')}}">Modifier le mot de passe</a>
+                        <a href="{{ path('app_logout')}}">Se déconecté</a>
+                    </div>
             <div class="info">
-                <p class="email">{{ app.user.email }}</p>
-                <p class="nom">{{ app.user.nom }}</p>
-                <p class="prenom">{{ app.user.prenom }}</p>
+                
+                <p class="nom">Afficher un nom<br><span>{{ app.user.nom }} {{ app.user.prenom }}</span></p>
+                <p class="email">adresse e-mail<br>{{ app.user.email }}</p>
             </div>
 
         </div>
