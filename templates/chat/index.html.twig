@@ -8,7 +8,10 @@
         
             <div class="containerPesudo">
                 <div class="heaiderSpeudo">
-                    <h1>Salut {{ app.user.speudo }}</h1>
+                    <div class="titreChat">
+                    <h1>Salut :</h1>
+                    <p>{{ app.user.speudo }}</p>
+                    </div>
                     <div class="burgerSpeudo">
                         <div class="burger">
                             <div class="line line1"></div>
@@ -28,7 +31,7 @@
                         <p class="email">adresse e-mail<br>{{ app.user.email }}</p>
                     </div>
                     <div class="login ">
-                                <a href="{{ path('acout_password')}}">Modifier Vos informations</a>
+                                <a href="{{ path('acout_profil')}}">Modifier Vos informations </a>
                                 <a href="{{ path('acout_password')}}">Modifier le mot de passe</a>
                                 <a href="{{ path('app_logout')}}">Se déconecté</a>
                             </div>
