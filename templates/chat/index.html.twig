@@ -9,8 +9,8 @@
             <div class="containerPesudo">
                 <div class="heaiderSpeudo">
                     <div class="titreChat">
-                    <h1>Salut :</h1>
-                    <p>{{ app.user.speudo }}</p>
+                    <h1>Salut et bienvenue</h1>
+                    <p>sur what chat </p>
                     </div>
                     <div class="burgerSpeudo">
                         <div class="burger">
@@ -26,9 +26,24 @@
                 
                     <img class="speudoImg" src="https://www.beachamigos.fr/media/uploaded/sites/9202/actualite/5c84f689e908e_Pseudoetanonymat.png" alt="image du speudo">
                     <div class="info">
-                        
-                        <p class="nom">Afficher un nom<br><span>{{ app.user.nom }} {{ app.user.prenom }}</span></p>
-                        <p class="email">adresse e-mail<br>{{ app.user.email }}</p>
+
+                        {% if app.user.visible %}
+                            <div class="infoProfil">
+                                <p class="IntituleInfoProfil">Speudo :<br><span>{{ app.user.speudo }} </span ></p>
+                            </div>
+
+                        {% else %}
+                            <div class="infoProfil">
+                            
+                                <p class="IntituleInfoProfil">Speudo :<br><span>{{ app.user.speudo }} </span ></p>
+                                <p class="IntituleInfoProfil">Nom :<br><span>{{ app.user.Nom }} </span ></p>
+                                <p class="IntituleInfoProfil">Prenom :<br><span>{{ app.user.Prenom }} </span ></p>
+                                <p class="IntituleInfoProfil">Email :<br><span>{{ app.user.email }} </span ></p>
+                                <p class="IntituleInfoProfil">N° téléphone :<br><span>{{ app.user.telephone }} </span ></p>
+
+                            
+                            </div>
+                        {% endif %}
                     </div>
                     <div class="login ">
                                 <a href="{{ path('acout_profil')}}">Modifier Vos informations </a>
@@ -48,10 +63,10 @@
                 <p>lorem</p>
                 </div>
                 <div class="containerPerticipent">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae facilis ab atque sunt reprehenderit illum assumenda consequatur repellendus sed asperiores a eligendi placeat dolorum maxime est natus rerum nesciunt, molestias corrupti iusto distinctio quae esse quaerat inventore? Maiores et commodi culpa quasi exercitationem aliquam eius amet illo quo officiis enim obcaecati, cum hic dolore odit recusandae repudiandae quaerat odio suscipit totam blanditiis asperiores reprehenderit? Id esse quaerat itaque rerum obcaecati, veritatis accusantium nemo modi commodi minima blanditiis neque dolorum sunt labore ipsam laboriosam soluta perspiciatis impedit dolores minus voluptates non totam. Accusantium ut fugiat provident, debitis fugit reprehenderit culpa dicta!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae facilis </p>
                 </div>
                 <div class="containerMessage">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae facilis ab atque sunt reprehenderit illum assumenda consequatur repellendus sed asperiores a eligendi placeat dolorum maxime est natus rerum nesciunt, molestias corrupti iusto distinctio quae esse quaerat inventore? Maiores et commodi culpa quasi exercitationem aliquam eius amet illo quo officiis enim obcaecati, cum hic dolore odit recusandae repudiandae quaerat odio suscipit totam blanditiis asperiores reprehenderit? Id esse quaerat itaque rerum obcaecati, veritatis accusantium nemo modi commodi minima blanditiis neque dolorum sunt labore ipsam laboriosam soluta perspiciatis impedit dolores minus voluptates non totam. Accusantium ut fugiat provident, debitis fugit reprehenderit culpa dicta!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae facilis ab atque sunt reprehenderit illum assumenda consequatur repellendus sed asperiores a eligendi placeat dolorum maxime est natus rerum nesciunt, molestias corrupti iusto distinctio quae esse quaerat inventore? Maiores et commodi culpa quasi exercitationem </p>
                 </div>
             
             </div>

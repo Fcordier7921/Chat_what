@@ -1,6 +1,6 @@
 *,
-::after,
-::before {
+ ::after,
+ ::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -91,6 +91,7 @@ a {
     border-radius: 5px;
     margin: 20px 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 .registerLogin {
@@ -114,7 +115,7 @@ a {
     background-color: #fcc817;
     border: none;
     border-radius: 5px;
-    cursor: default;
+    cursor: pointer;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -250,6 +251,7 @@ a {
     border: none;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 .retour {
@@ -269,7 +271,29 @@ a {
     border: none;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    cursor: default;
+}
+
+.formcontainerregister form div:nth-child(9) {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.Labelcheckboxrequired {
+    margin: 0;
+    margin-top: 7px;
+    padding: 0 5px;
+    width: 700px;
+    height: 20px;
+    font-size: 15px;
+}
+
+.checkboxrequired {
+    margin: 0;
+    margin-top: 7px;
+    margin-left: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 800px) {
@@ -577,6 +601,28 @@ a {
     cursor: default;
 }
 
+.formContainerModificationRegister form div:nth-child(7) {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.Labelcheckboxrequired {
+    margin: 0;
+    margin-top: 7px;
+    padding: 0 5px;
+    width: 700px;
+    height: 20px;
+    font-size: 15px;
+}
+
+.checkboxrequired {
+    margin: 0;
+    margin-top: 7px;
+    margin-left: 20px;
+    width: 20px;
+    height: 20px;
+}
+
 @media screen and (max-width: 800px) {
     .containerModificationRegister {
         overflow: hidden;
@@ -656,6 +702,9 @@ a {
     display: flex;
 }
 
+
+/*---parti presentation profil--*/
+
 .containerPesudo {
     width: 1500px;
     display: flex;
@@ -663,7 +712,7 @@ a {
     background: #fff;
     border-radius: 20px;
     overflow: hidden;
-    margin: 0 50px;
+    margin: 0;
 }
 
 .heaiderSpeudo {
@@ -746,7 +795,7 @@ a {
     opacity: 0;
     position: absolute;
     width: 100%;
-    height: 300px;
+    height: 400px;
     background-color: #fff;
     top: 159px;
     left: 0;
@@ -763,7 +812,7 @@ a {
     opacity: 1;
     position: absolute;
     width: 100%;
-    height: 300px;
+    height: 400px;
     background-color: #fff;
     top: 159px;
     left: 0;
@@ -804,7 +853,41 @@ a {
 .speudoImg {
     width: 150px;
     height: 150px;
-    margin: 10px 0 10px 50px;
+    margin: 10px 0 10px 60px;
     border: none;
     border-radius: 25%;
+}
+
+.infoProfil {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    margin: 10px 10px;
+}
+
+.IntituleInfoProfil {
+    margin: 5px 20px;
+    font-size: 17px;
+    font-weight: 550;
+}
+
+.IntituleInfoProfil span {
+    font-family: 'latoregular';
+    font-weight: 100;
+    font-style: italic;
+}
+
+
+/*---parti chat--*/
+
+.containercorpChat {
+    width: 5000px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0 40px;
+    display: flex;
 }

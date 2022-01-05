@@ -7,6 +7,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -72,6 +73,16 @@ class ChangeProfilType extends AbstractType
             'attr' => [
                 'placeholder' => ' Merci de saisir votre numéro de téléphone',
                 'class' => 'inputRegister'
+            ],
+            'required' => false
+        ])
+        ->add('visible', CheckboxType::class, [
+            'label' => 'Cacher ces informations personelle, seul votre pesudo sera visible', 
+            'label_attr' => [
+                'class' => 'Labelcheckboxrequired'
+            ],
+            'attr' => [
+                'class' => 'checkboxrequired'
             ],
             'required' => false
         ])

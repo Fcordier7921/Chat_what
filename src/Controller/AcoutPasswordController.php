@@ -39,8 +39,9 @@ class AcoutPasswordController extends AbstractController
                 $this->entityManager->flush();
                 $notification = 'Votre mot de passe a été modifié avec succès';
             }else{
-            $notification = 'Votre mot de passe actuel est incorrect';
-        }
+                $notification = 'Votre mot de passe actuel est incorrect';
+            }
+            
         }
 
         return $this->render('security/acoutPassword.html.twig', [

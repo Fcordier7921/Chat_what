@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -112,6 +113,16 @@ class RegisterType extends AbstractType
                         'class' => 'inputRegister'
                     ]
                 ]
+            ])
+            ->add('visible', CheckboxType::class, [
+                'label' => 'Cacher ces informations personelle, seul votre pesudo sera visible', 
+                'label_attr' => [
+                    'class' => 'Labelcheckboxrequired'
+                ],
+                'attr' => [
+                    'class' => 'checkboxrequired'
+                ],
+                'required' => false
             ])
             
             ->add('submit', SubmitType::class, [
