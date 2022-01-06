@@ -30,28 +30,28 @@ class ChangeProfilType extends AbstractType
             ],
             'attr' => [
                 'placeholder' => ' Merci de saisir votre speudo',
-                'class' => 'inputRegister'
+                'class' => 'inputModif'
             ]
         ])
         ->add('Nom', TextType::class, [
             'label' => 'Votre Nom',
             'attr' => [
                 'placeholder' => ' Merci de saisir votre Nom',
-                'class' => 'inputRegister'
+                'class' => 'inputModif'
             ]
         ])
         ->add('Prenom', TextType::class, [
             'label' => 'Votre Prénom',
             'attr' => [
                 'placeholder' => ' Merci de saisir votre Prénom',
-                'class' => 'inputRegister'
+                'class' => 'inputModif'
             ]
         ])
         ->add('email', EmailType::class, [
             'label' => 'Votre Email',
             'attr' => [
                 'placeholder' => 'Merci de saisir votre adresse email',
-                'class' => 'inputRegister'
+                'class' => 'inputModif'
             ]
         ])
         ->add('adress', TextType::class, [
@@ -61,7 +61,7 @@ class ChangeProfilType extends AbstractType
             ],
             'attr' => [
                 'placeholder' => ' Merci de saisir votre Adresse postal',
-                'class' => 'inputRegister'
+                'class' => 'inputModif'
             ],
             'required' => false
         ])
@@ -72,17 +72,17 @@ class ChangeProfilType extends AbstractType
             ],
             'attr' => [
                 'placeholder' => ' Merci de saisir votre numéro de téléphone',
-                'class' => 'inputRegister'
+                'class' => 'inputModif'
             ],
             'required' => false
         ])
         ->add('visible', CheckboxType::class, [
             'label' => 'Cacher ces informations personelle, seul votre pesudo sera visible', 
             'label_attr' => [
-                'class' => 'Labelcheckboxrequired'
+                'class' => 'LabelcheckboxModifProfil'
             ],
             'attr' => [
-                'class' => 'checkboxrequired'
+                'class' => 'checkboxModifProfil'
             ],
             'required' => false
         ])
