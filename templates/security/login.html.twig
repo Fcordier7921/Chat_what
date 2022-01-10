@@ -4,7 +4,12 @@
 
 {% block body %}
 <div class="containerLogin">
-    <div class="formulaireLogin">
+    {% if app.user %}       
+        <div class="formulaireLogin" style="height: 350px;">
+    {% else %}
+        <div class="formulaireLogin">
+    {% endif %}
+
         <h1 class="titileLogin">Merci de vous conecté</h1>
     
         <form class="formLogin" method="post">
@@ -15,9 +20,9 @@
             {% if app.user %}
                 <div class="infoLogin">
                     Vous êtes connecté en tant que {{ app.user.username }} <a href="{{ path('app_logout') }}">déconnexion</a>
+                    <hr>
                 </div>
             {% endif %}
-
             <label for="inputEmail">Email</label>
             <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
             <label for="inputPassword">Votre mot de passe</label>

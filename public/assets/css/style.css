@@ -36,7 +36,6 @@ a {
 
 .formulaireLogin {
     width: 700px;
-    height: 310px;
     border-radius: 20px;
     position: absolute;
     top: 50%;
@@ -119,10 +118,14 @@ a {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
+.infoLogin hr {
+    margin: 10px 0;
+}
+
 @media screen and (max-width: 980px) {
     .formulaireLogin {
         width: 100vw;
-        height: 80vh;
+        height: 500px!important;
     }
     .titileLogin {
         width: 100%;
@@ -146,17 +149,56 @@ a {
         font-size: 4vw;
     }
     .registerLogin {
-        font-size: 5vw;
+        font-size: 3vw;
         margin: 25px 5px;
     }
     .registerLogin a {
-        font-size: 5vw;
+        font-size: 3vw;
     }
     .infoLogin {
         font-size: 3vw;
     }
     .infoLogin a {
         font-size: 2.5vw;
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .formulaireLogin {
+        width: 100vw;
+        height: 100vh!important;
+        border-radius: 0;
+        overflow-y: scroll;
+    }
+    .titileLogin {
+        width: 100%;
+        height: 20vw;
+        padding-top: 4vw;
+        font-size: 8vw;
+    }
+    .formulaireLogin label {
+        font-size: 8vw;
+    }
+    .form-control {
+        font-size: 6vw;
+    }
+    .conectionLogin {
+        width: 100%;
+        height: 50px;
+        font-size: 7vw;
+    }
+    .registerLogin {
+        font-size: 7vw;
+    }
+    .registerLogin a {
+        font-size: 7vw;
+    }
+    .infoLogin {
+        font-size: 7vw;
+    }
+    .infoLogin a {
+        font-size: 7vw;
         display: inline-block;
     }
 }
@@ -312,13 +354,14 @@ a {
         width: 100%;
     }
     .formulaireLogin form div .required {
-        font-size: 5vw;
+        font-size: 7vw;
         margin-left: 10%;
     }
     .inputRegister {
         width: 93%;
         margin-left: 3%;
         height: 8vw;
+        font-size: 4vw;
     }
     .submitRegister {
         width: 95%;
@@ -346,7 +389,7 @@ a {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
     .formcontainerregister form div .required {
         margin: 6.5px 20px;
     }
@@ -355,11 +398,12 @@ a {
     }
     .Labelcheckboxrequired {
         margin: 5vw 0 0 0;
+        font-size: 5vw;
     }
     .checkboxrequired {
-        margin: 0 0 0 20px;
+        margin: 25px 0 0 20px;
         width: 20vw;
-        height: 20vw;
+        height: 5vw;
     }
 }
 
@@ -663,6 +707,7 @@ a {
         width: 93%;
         margin-left: 3%;
         height: 8vw;
+        font-size: 5vw;
     }
     .submitRegister {
         width: 95%;
@@ -676,13 +721,13 @@ a {
     .retourRegister button {
         width: 90vw;
         height: 10vw;
-        margin: 20px 25px;
+        margin: 20px 19px;
         font-size: 5vw;
     }
     .retour {
         width: 90vw;
         height: 10vw;
-        margin: 20px 25px;
+        margin: 20px 19px;
     }
     .retour a {
         font-size: 4vw;
@@ -921,4 +966,16 @@ a {
     overflow: hidden;
     margin: 0 40px;
     display: flex;
+}
+
+.containerGroupe {
+    width: 200px;
+    height: 100%;
+    background: #87cefa;
+    box-shadow: 1px 1px 5px #000;
+    margin-right: 5px;
+}
+
+.containerPerticipent {
+    width: 850px;
 }
