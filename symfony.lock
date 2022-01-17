@@ -91,6 +91,12 @@
     "laminas/laminas-code": {
         "version": "4.5.1"
     },
+    "lcobucci/clock": {
+        "version": "2.0.0"
+    },
+    "lcobucci/jwt": {
+        "version": "4.1.5"
+    },
     "monolog/monolog": {
         "version": "2.3.5"
     },
@@ -225,6 +231,18 @@
             "./config/packages/sensio_framework_extra.yaml"
         ]
     },
+    "symfony/amqp-messenger": {
+        "version": "v5.4.0"
+    },
+    "symfony/apache-pack": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "9d254a22efca7264203eea98b866f16f944b2f09"
+        }
+    },
     "symfony/asset": {
         "version": "v5.4.0"
     },
@@ -275,6 +293,9 @@
     },
     "symfony/doctrine-bridge": {
         "version": "v5.4.1"
+    },
+    "symfony/doctrine-messenger": {
+        "version": "v5.4.0"
     },
     "symfony/dom-crawler": {
         "version": "v5.4.0"
@@ -370,6 +391,33 @@
             "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
         }
     },
+    "symfony/mercure": {
+        "version": "v0.6.1"
+    },
+    "symfony/mercure-bundle": {
+        "version": "0.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "0.3",
+            "ref": "e0a854b5439186e04b28fb8887b42c54f24a0d32"
+        },
+        "files": [
+            "./config/packages/mercure.yaml"
+        ]
+    },
+    "symfony/messenger": {
+        "version": "5.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.3",
+            "ref": "25e3c964d3aee480b3acc3114ffb7940c89edfed"
+        },
+        "files": [
+            "./config/packages/messenger.yaml"
+        ]
+    },
     "symfony/mime": {
         "version": "v5.4.0"
     },
@@ -459,6 +507,9 @@
     },
     "symfony/proxy-manager-bridge": {
         "version": "v5.4.0"
+    },
+    "symfony/redis-messenger": {
+        "version": "v5.4.2"
     },
     "symfony/routing": {
         "version": "5.4",

@@ -56,11 +56,12 @@
             </div>
             <div class="containercorpChat">
                 <div class="containerGroupe">
-                    <p>lorem</p>
-                    <p>lorem</p>
-                    <p>lorem</p>
-                    <p>lorem</p>
-                    <p>lorem</p>
+                    {% for channel in channels %}
+
+                    <p>
+                            {{ channel.name }}
+                        </p>
+                    {% endfor %}
                 </div>
                 <div class="containerPerticipent">
                     <div class="recherche">
@@ -72,7 +73,34 @@
                     </div>
                 </div>
                 <div class="containerMessage">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae facilis ab atque sunt reprehenderit illum assumenda consequatur repellendus sed asperiores a eligendi placeat dolorum maxime est natus rerum nesciunt, molestias corrupti iusto distinctio quae esse quaerat inventore? Maiores et commodi culpa quasi exercitationem </p>
+                    {% for message in messages %}
+                {% if app.user == message.author %}
+                    <div class="row w-75 float-right">
+                        <b>{{ message.author.username }}</b>
+                        <p class="alert alert-info w-100">
+                            {{ message.content }}
+                        </p>
+                    </div>
+                {% else %}
+                    <div class="row w-75 float-left">
+                        <b>{{ message.author.username }}</b>
+                        <p class="alert alert-success w-100">
+                            {{ message.content }}
+                        </p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            {{ form_start(formMessage) }}
+        
+            {{ form_errors(formMessage) }}
+            {{ form_row(formMessage.content) }}
+            
+            
+                {{ form_row(formMessage.submit) }}
+           
+               
+
+        {{ form_end(formMessage) }} 
                 </div>
             
             </div>
